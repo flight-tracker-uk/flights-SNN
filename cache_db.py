@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS flights (
     depart_minutes  INTEGER DEFAULT 0,
     arrive_minutes  INTEGER DEFAULT 0,
     price           REAL NOT NULL,
-    currency        TEXT DEFAULT 'GBP',
+    currency        TEXT DEFAULT 'EUR',
     stops           INTEGER DEFAULT 0,
     arrival_ahead   TEXT DEFAULT '',
     created_at      TEXT NOT NULL
@@ -191,7 +191,7 @@ class FlightCache:
                     "depart_minutes, arrive_minutes, price, currency, stops, arrival_ahead, created_at) "
                     "VALUES(?,?,?,?,?,?,?,?,?,?,?)",
                     (search_id, f.get("airline", ""), f.get("departure", ""), f.get("arrival", ""),
-                     dep_mins, arr_mins, f.get("price", 0), f.get("currency", "GBP"),
+                     dep_mins, arr_mins, f.get("price", 0), f.get("currency", "EUR"),
                      f.get("stops", 0), f.get("arrival_ahead", ""), now),
                 )
 

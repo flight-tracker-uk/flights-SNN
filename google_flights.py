@@ -18,8 +18,8 @@ def _get_patched_fetch(cookie_str: str, chrome_version: str):
     from primp import Client
 
     def _fetch(params):
-        # Force GBP currency and UK English locale
-        params["curr"] = "GBP"
+        # Force EUR currency and UK English locale
+        params["curr"] = "EUR"
         params["hl"] = "en-GB"
         params["gl"] = "uk"
 

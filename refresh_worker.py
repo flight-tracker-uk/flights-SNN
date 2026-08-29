@@ -101,7 +101,7 @@ class RefreshStats:
             f"Skipped (fresh):     {self.skipped}",
             f"Flights found:       {self.flights_found}",
             f"Flights skipped:     {self.flights_skipped_no_time} (no time data)",
-            f"Flights zero price:  {self.flights_skipped_zero_price} (£0 excluded)",
+            f"Flights zero price:  {self.flights_skipped_zero_price} (€0 excluded)",
             f"Flights filtered:    {self.flights_filtered} (wrong time/stops for day trips)",
             f"Unchanged searches:  {self.unchanged} (data identical, skip D1 write)",
             f"Destinations:        {len(self.destinations_searched)}",
@@ -245,7 +245,7 @@ def run_refresh(
                         "depart_minutes": dep_mins,
                         "arrive_minutes": arr_mins,
                         "price": price,
-                        "currency": "GBP",
+                        "currency": "EUR",
                         "stops": stops,
                         "arrival_ahead": arrival_ahead,
                     })
@@ -334,7 +334,7 @@ def run_refresh(
                         flights.append({
                             "airline": f.name or "", "departure": dep_time, "arrival": arr_time,
                             "depart_minutes": dep_mins, "arrive_minutes": arr_mins,
-                            "price": price, "currency": "GBP",
+                            "price": price, "currency": "EUR",
                             "stops": stops, "arrival_ahead": arrival_ahead,
                         })
                 seen_flights = set()

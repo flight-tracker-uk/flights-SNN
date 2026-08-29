@@ -158,7 +158,7 @@ class D1Client:
                 params.extend([
                     search_id, f.get("airline", ""), f.get("departure", ""), f.get("arrival", ""),
                     str(f.get("depart_minutes", 0)), str(f.get("arrive_minutes", 0)),
-                    str(f.get("price", 0)), f.get("currency", "GBP"), str(f.get("stops", 0)),
+                    str(f.get("price", 0)), f.get("currency", "EUR"), str(f.get("stops", 0)),
                     f.get("arrival_ahead", ""), searched_at,
                 ])
             self._run(
